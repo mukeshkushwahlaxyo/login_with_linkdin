@@ -70,4 +70,40 @@ class FacebookController extends Controller
        // }
 
     }
+
+    public function redirectToGit()
+    {
+        return Socialite::driver('github')->redirect();
+    }
+
+    public function handleGitCallback()
+    {  
+    	//try {
+            $user = Socialite::driver('github')->stateless()->user();
+           dd($user);
+            $finduser = User::where('google_id', $user->id)->first();
+
+            if($finduser){
+                Auth::login($finduser);
+                return redirect('/home');
+            }else{
+            	$user1 = new User;
+                $user1->name = $user->getName();
+                $user1->email = $user->getEmail();
+                $user1->google_id = $user->getId();
+                $user1->password = md5($user->getName());
+                $user1->save();
+                Auth::loginUsingId($user1->getAuthIdentifier());
+                return redirect('/home');
+            }
+
+  
+
+       // } catch (Exception $e) {
+       //	dd('error');
+        //    return redirect('auth/google');
+
+       // }
+
+    }
 }

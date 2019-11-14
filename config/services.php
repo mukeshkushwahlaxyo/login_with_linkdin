@@ -44,4 +44,10 @@ return [
             'client_secret' => '85JIV9jNdd9028TrBtx0z2QH',
             'redirect' => 'http://localhost:8000/google'
         ],
+
+   'github' => [
+        'client_id' => 'Iv1.64ae88ed495c06b4',
+        'client_secret' =>'64a35ed7b42f8d1766d9a953fe2bb22993c6f8bf',
+        'redirect' => 'http://localhost:8000/git/callback'
+    ],
 ];

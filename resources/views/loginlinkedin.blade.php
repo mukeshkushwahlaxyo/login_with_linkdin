@@ -40,10 +40,11 @@
               <strong>Login With Facebook</strong>
             </a>     
             <a href="{{ url('auth/google') }}" class="btn btn-lg btn-primary btn-block">
-
-          <strong>Login With Google</strong>
-
-          </a> 
+              <strong>Login With Google</strong>
+            </a>
+            <a href="{{ url('auth/git') }}" class="btn btn-lg btn-primary btn-block">
+              <strong>Login With Github</strong>
+            </a> 
             <button type="submit" class="btn btn-success">Login</button>
             </div>
         </div>

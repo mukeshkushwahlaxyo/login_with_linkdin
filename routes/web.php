@@ -26,3 +26,6 @@ Route::get('auth/facebook/callback', 'FacebookController@handleFacebookCallback'
 
 Route::get('auth/google', 'FacebookController@redirectToGoogle');
 Route::get('google', 'FacebookController@handleGoogleCallback');
+
+Route::get('auth/git', 'FacebookController@redirectToGit');
+Route::get('git/callback', 'FacebookController@handleGitCallback');
