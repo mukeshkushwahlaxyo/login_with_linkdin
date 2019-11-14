@@ -36,6 +36,14 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
             <a href="{{ url('/redirect') }}" class="btn btn-primary">Login With Linkedin</a>
+            <a href="{{ url('auth/facebook') }}" class="btn btn-lg btn-primary btn-block">
+              <strong>Login With Facebook</strong>
+            </a>     
+            <a href="{{ url('auth/google') }}" class="btn btn-lg btn-primary btn-block">
+
+          <strong>Login With Google</strong>
+
+          </a> 
             <button type="submit" class="btn btn-success">Login</button>
             </div>
         </div>

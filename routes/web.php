@@ -20,3 +20,9 @@ Route::get('/redirect', 'SocialAuthLinkedinController@redirect');
 Route::get('/', 'SocialAuthLinkedinController@callback');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('auth/facebook', 'FacebookController@redirectToFacebook');
+Route::get('auth/facebook/callback', 'FacebookController@handleFacebookCallback');
+
+Route::get('auth/google', 'FacebookController@redirectToGoogle');
+Route::get('google', 'FacebookController@handleGoogleCallback');
